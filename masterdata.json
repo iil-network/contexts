@@ -83,6 +83,13 @@
           }
           
         },
+        "Certificates": {
+            "@id": "https://iil.network/context/masterdata#Certificates",
+            "@type": "@id",
+            "@container": "@graph"
+            
+        },
+
         "Certificate": {
             "@id": "https://iil.network/context/masterdata#Certificate",
             "@context": {
