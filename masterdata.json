@@ -86,7 +86,7 @@
         "Certificates": {
             "@id": "https://iil.network/context/masterdata#Certificates",
             "@type": "@id",
-            "@container": "@graph"
+            "@container": "@list"
             
         },
 
