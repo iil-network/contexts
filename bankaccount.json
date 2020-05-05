@@ -1,0 +1,29 @@
+{
+
+    "@context": {
+
+        "BankAccountCredential": {
+            "@id": "https://iil.network/contexts/bankaccount",
+            "@context": {
+                
+                "@protected": true,
+		        "id": "@id",
+		        "type": "@type"
+            }
+        },
+        
+        "BankAccount": {
+            "@id": "https://iil.network/contexts/bankaccount#BankAccount",
+            "@context": {
+                
+                "@protected": true,
+		        "id": "@id",
+		        "type": "@type", 
+                "iilBank": "https://iil.network/contexts/BankAccount#",
+                "iban": "iilBank:iban",
+                "bic": "iilBank:bic" 
+            }
+        }
+    }
+
+}
