@@ -20,104 +20,67 @@
             }
         },
 
-        "LegalEntity": "rov:RegisteredOrganization",
+        "LegalEntity": {
+           "@id": "rov:RegisteredOrganization",
+           "@context": {
+               "legalName": "schema:legalName",
+               "altName": "schema:altName",
+               "website": "schema:website"
+
+           }
+
+           
+        },
 
         "identifier": {
             "@id": "md:identifer",
             "@type": "@id",
-            "@container": "@graph"
+            "@container": "@graph",
+            "@context": {
+                "dunsNumber": "schema:duns",
+                "lei": "schema:leiCode",
+                "vatNumber": "schema:vatID",
+                "usccNumber": "md:uscc"
+
+            }
 
         },
 
-        "dunsNumber": "schema:duns",
-        "lei": "schema:leiCode",
-        "vatNumber": "schema:vatID",
-        "usccNumber": "md:uscc",
+        "parent": "org:subOrganizationOf",
 
-        "RegistrationAddress": {
-            "@id": "https://iil.network/contexts/masterdata#RegistrationAddress",
+        "registeredSite": {
+            "@id": "org:hasRegisteredSiter",
             "@context": {
                 
-                "@protected": true,
-		        "id": "@id",
-		        "type": "@type", 
-                "iil": "https://iil.network/contexts/masterdata#",
-                "schema": "https://schema.org/",
-                "streetAndNumber": "schema:streetAddress",
-                "streetLine2": "iil:streetLine2",
-                "zipCode": "schema:postalCode",
-                "city": "schema:addressLocality",
-                "region": "schema:addressRegion",
-                "country": "schema:addressCountry"
+                "address": {
+                    "@id": "schema:postalAddress",
+                    "@context": {
+                        "streetAddress": "schema:streetAddress",
+                        "zipCode": "schema:postalCode",
+                        "city": "schema:addressLocality",
+                        "region": "schema:addressRegion",
+                        "country": "schema:addressCountry"
+                    }
+                }
+                
      
             }
         },
 
-        "registrationAddressPO": "urn:tbd",
-
-        "ceo": {
-            "@id": "https://iil.network/context/masterdata#ceo",
-            "@type": "ContactPerson"
-        },
-        "directorLogistics": {
-            "@id": "https://iil.network/context/masterdata#directorLogistics",
-            "@type": "ContactPerson"
-        },
-        "ContactPerson": {
-          "@id": "https://iil.network/context/masterdata#ContactPerson",
+        "officer": {
+          "@id": "md:officer",
+          "@type": "@id",
+          "@container": "@graph",
           "@context": {
             
-            "@protected": true,
-            "id": "@id",
-            "type": "@type",
             "lastName": "https://schema.org/familyName",
               "firstName": "https://schema.org/givenName",
               "salutation": "http://schema.org/honorificPrefix",
               "academicTitle": "http://schema.org/honorificPrefix",
-              "email": "http://schema.org/email",
-              "country": "https://schema.org/Country",
-              "phone": "http://schema.org/telephone",
-              "mobile": {
-                "@id":"https://iil.network/context/masterdata#mobile",
-                "@type": "http://schema.org/telephone"
-            } 
+              "role": "md:role"
           }
           
-        },
-        "Certificates": {
-            "@id": "https://iil.network/context/masterdata#Certificates",
-            "@type": "@id",
-            "@container": "@list"
-            
-        },
-
-        "Certificate": {
-            "@id": "https://iil.network/context/masterdata#Certificate",
-            "@context": {
-                
-                "@protected": true,
-                "id": "@id",
-                "type": "@type",
-                "name": "urn:tbd",
-                "regNumber": "urn:tbd",
-                "applicableRegion": "urn:tbd",
-                "agency" : "https://iil.network/context/masterdata#Agency"
-
-            }
-        },
-
-        "Agency": {
-            "@id": "https://iil.network/context/masterdata#Agency",
-            "@context": {
-                "@protected": true,
-                "id": "@id",
-                "type": "@type",
-                "name": "https://schema.org/legalName",
-                "regNumber": "urn:tbd"
-
-            }
-        }   
-
+        }
 
 
     }
