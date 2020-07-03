@@ -1,0 +1,26 @@
+{
+
+    "@context": {
+
+        "CertificateCredential": {
+            "@id": "https://iil.network/contexts/certificate#CertificateCredential",
+            "@context": {
+                
+                "@protected": true,
+		        "id": "@id",
+		        "type": "@type"
+            }
+        },
+        
+        "Certificate": {
+            "@id": "https://iil.network/contexts/certificate#i",
+            "@context": {
+                
+                "@protected": true,
+		        "id": "@id",
+		        "type": "@type"
+            }
+        }
+    }
+
+}
