@@ -2,7 +2,7 @@
 
     "@context": {
 
-        "iilbank": "https://iil.network/contexts/bankaccount/",
+        "iilBank": "https://iil.network/contexts/bankaccount/",
 
         "BankAccountCredential": {
             "@id": "iilBank:BankAccountCredential",
