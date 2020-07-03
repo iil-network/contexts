@@ -49,7 +49,7 @@
         "parent": "org:subOrganizationOf",
 
         "registeredSite": {
-            "@id": "org:hasRegisteredSiter",
+            "@id": "org:hasRegisteredSite",
             "@context": {
                 
                 "address": {

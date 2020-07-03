@@ -2,8 +2,10 @@
 
     "@context": {
 
+        "iilbank": "https://iil.network/contexts/bankaccount/",
+
         "BankAccountCredential": {
-            "@id": "https://iil.network/contexts/bankaccount",
+            "@id": "iilBank:BankAccountCredential",
             "@context": {
                 
                 "@protected": true,
@@ -12,14 +14,11 @@
             }
         },
         
-        "BankAccount": {
-            "@id": "https://iil.network/contexts/bankaccount#BankAccount",
+        "bankAccount": {
+            "@id": "iilBank:BankAccount",
             "@context": {
                 
                 "@protected": true,
-		        "id": "@id",
-		        "type": "@type", 
-                "iilBank": "https://iil.network/contexts/BankAccount#",
                 "iban": "iilBank:iban",
                 "bic": "iilBank:bic" 
             }
