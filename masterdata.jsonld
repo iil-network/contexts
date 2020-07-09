@@ -40,7 +40,8 @@
                 "dunsNumber": "schema:duns",
                 "lei": "schema:leiCode",
                 "vatNumber": "schema:vatID",
-                "usccNumber": "md:uscc"
+                "usccNumber": "md:uscc",
+		"gln": "schema:globalLocationNumber"
 
             }
 
