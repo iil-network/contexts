@@ -35,7 +35,6 @@
         "identifier": {
             "@id": "md:identifer",
             "@type": "@id",
-            "@container": "@graph",
             "@context": {
                 "dunsNumber": "schema:duns",
                 "lei": "schema:leiCode",
@@ -47,13 +46,12 @@
 
         },
 
-        "parent": "org:subOrganizationOf",
+        "ultimateParent": "org:subOrganizationOf",
 
         "registeredSite": {
             "@id": "org:hasRegisteredSite",
             "@context": {
-                
-                "address": {
+                "address": 
                     "@id": "schema:postalAddress",
                     "@context": {
                         "streetAddress": "schema:streetAddress",
@@ -68,10 +66,9 @@
             }
         },
 
-        "officer": {
-          "@id": "md:officer",
+        "contactPerson": {
+          "@id": "org:memberOf",
           "@type": "@id",
-          "@container": "@graph",
           "@context": {
             
             "lastName": "https://schema.org/familyName",
