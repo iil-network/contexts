@@ -51,7 +51,7 @@
         "registeredSite": {
             "@id": "org:hasRegisteredSite",
             "@context": {
-                "address": 
+                "address": {
                     "@id": "schema:postalAddress",
                     "@context": {
                         "streetAddress": "schema:streetAddress",
