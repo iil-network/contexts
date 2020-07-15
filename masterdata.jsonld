@@ -1,37 +1,27 @@
 {
-
     "@context": {
-
         "id": "@id",
         "type": "@type",
-
         "rov": "https://www.w3.org/TR/vocab-regorg/",
         "schema": "https://schema.org/",
         "org": "http://www.w3.org/ns/org#",
         "md": "https://iil.network/contexts/masterdata#",
-
         "MasterDataCredential": {
             "@id": "md:MasterDataCredential",
             "@context": {
-                
                 "@protected": true,
-		        "id": "@id",
-		        "type": "@type"
+                "id": "@id",
+                "type": "@type"
             }
         },
-
         "LegalEntity": {
-           "@id": "rov:RegisteredOrganization",
-           "@context": {
-               "legalName": "schema:legalName",
-               "altName": "schema:altName",
-               "website": "schema:website"
-
-           }
-
-           
+            "@id": "rov:RegisteredOrganization",
+            "@context": {
+                "legalName": "schema:legalName",
+                "altName": "schema:altName",
+                "website": "schema:website"
+            }
         },
-
         "identifier": {
             "@id": "md:identifer",
             "@type": "@id",
@@ -40,14 +30,10 @@
                 "lei": "schema:leiCode",
                 "vatNumber": "schema:vatID",
                 "usccNumber": "md:uscc",
-		"gln": "schema:globalLocationNumber"
-
+                "gln": "schema:globalLocationNumber"
             }
-
         },
-
         "ultimateParent": "org:subOrganizationOf",
-
         "registeredSite": {
             "@id": "org:hasRegisteredSite",
             "@context": {
@@ -61,28 +47,26 @@
                         "country": "schema:addressCountry"
                     }
                 }
-                
-     
             }
         },
-
         "contactPerson": {
-          "@id": "org:memberOf",
-          "@type": "@id",
-          "@context": {
-            
-            "lastName": "https://schema.org/familyName",
-              "firstName": "https://schema.org/givenName",
-              "salutation": "http://schema.org/honorificPrefix",
-              "academicTitle": "http://schema.org/honorificPrefix",
-              "role": "md:role"
-          }
-          
+            "@id": "org:hasMember",
+            "@type": "@id",
+            "@context": {
+                "lastName": "https://schema.org/familyName",
+                "firstName": "https://schema.org/givenName",
+                "salutation": "http://schema.org/honorificPrefix",
+                "academicTitle": "http://schema.org/honorificPrefix",
+                "role": "md:role"
+            }
+        },
+        "bankAccount": {
+            "@id": "md:hasBankAccount",
+            "@type": "@id",
+            "@context": {
+                "iban": "md:iban",
+                "bic": "md:bic"
+            }
         }
-
-
     }
-    
-
-
 }
