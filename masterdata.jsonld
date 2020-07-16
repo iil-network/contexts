@@ -19,7 +19,8 @@
             "@context": {
                 "legalName": "schema:legalName",
                 "altName": "schema:altName",
-                "website": "schema:website"
+                "website": "schema:website",
+                "logo": "schema:logo"
             }
         },
         "identifier": {
