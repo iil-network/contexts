@@ -6,8 +6,9 @@
         "schema": "https://schema.org/",
         "org": "http://www.w3.org/ns/org#",
         "md": "https://iil.network/contexts/masterdata#",
-        "MasterDataCredential": {
-            "@id": "md:MasterDataCredential",
+        
+        "OrganizationalProfileCredential": {
+            "@id": "md:OrganizationalProfileCredential",
             "@context": {
                 "@protected": true,
                 "id": "@id",
